@@ -23,8 +23,7 @@ withdraw --client="John Jones" --amount=100 --description="ATM Withdrawal"
 ```
 
 ```bash
-show_bank_statement --client="John Jones" --since="2022-02-01 00:00:00" --till="2022-03-01
-00:00:00
+show_bank_statement --client="John Jones" --since="2022-02-01 00:00:00" --till="2022-03-01 00:00:00"
 ```
 
 # Установка:
