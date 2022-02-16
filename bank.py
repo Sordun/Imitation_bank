@@ -46,6 +46,7 @@ class Bank:
         table.field_names = ["Date", "Description", "Withdrawals", "Deposits", "Balance"]
         w, d = 0, 0
         table.add_row(["", "Previous balance", "", "", f"${d:.2f}"])
+        table.add_row(["-------------------", "----------------", "-----------", "--------", "-------"])
         for i in timing:
             if i[2] > 0:
                 table.add_row([i[1], i[0], "", f"${abs(i[2]):.2f}", f"${abs(i[3]):.2f}"])
@@ -53,6 +54,7 @@ class Bank:
             if i[2] < 0:
                 table.add_row([i[1], i[0], f"${abs(i[2]):.2f}", "", f"${abs(i[3]):.2f}"])
                 w += i[2]
+        table.add_row(["-------------------", "----------------", "-----------", "--------", "-------"])
         table.add_row(["", "Total", f"${abs(w):.2f}", f"${abs(d):.2f}", f"${self.accounts[client]:.2f}"])
         return table
 
